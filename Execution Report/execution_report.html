@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Testing Automation Suite - Execution Report</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f6f8fb; color: #17233c; margin: 0; }
+  header { background: #1b2a4a; color: #fff; padding: 24px 36px; }
+  header h1 { margin: 0; font-size: 28px; }
+  header p { margin: 6px 0 0; color: #cbd6e8; }
+  main { max-width: 1100px; margin: 30px auto; padding: 0 20px; }
+  .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 24px; }
+  .card { background: #fff; border: 1px solid #dce3ee; border-radius: 10px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .number { font-size: 34px; font-weight: 800; color: #2e5fa3; }
+  .label { font-size: 12px; text-transform: uppercase; font-weight: 700; color: #5a6b85; letter-spacing: .04em; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #dce3ee; border-radius: 10px; overflow: hidden; }
+  th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid #edf1f7; font-size: 14px; }
+  th { background: #eef3fa; color: #253a5c; text-transform: uppercase; font-size: 12px; letter-spacing: .04em; }
+  .pass { color: #0f766e; font-weight: 700; }
+  .section-title { margin-top: 30px; color: #1b2a4a; }
+  pre { background: #0f172a; color: #e2e8f0; padding: 18px; border-radius: 10px; overflow-x: auto; }
+  footer { margin-top: 36px; padding: 18px; background: #1b2a4a; color: #cbd6e8; text-align: center; font-size: 13px; }
+  footer strong { color: #fff; }
+</style>
+</head>
+<body>
+<header>
+  <h1>API Testing Automation Suite - Execution Report</h1>
+  <p>REST API automation using Python, Requests, and PyTest</p>
+</header>
+<main>
+  <div class="grid">
+    <div class="card"><div class="number">13</div><div class="label">Total Tests</div></div>
+    <div class="card"><div class="number">13</div><div class="label">Passed</div></div>
+    <div class="card"><div class="number">0</div><div class="label">Failed</div></div>
+    <div class="card"><div class="number">100%</div><div class="label">Pass Rate</div></div>
+  </div>
+
+  <h2 class="section-title">Execution Summary</h2>
+  <table>
+    <tr><th>Requirement</th><th>Status</th><th>Details</th></tr>
+    <tr><td>GET Requests</td><td class="pass">Passed</td><td>Health, list, detail, and filter endpoints validated.</td></tr>
+    <tr><td>POST Requests</td><td class="pass">Passed</td><td>Create task and negative validation scenarios tested.</td></tr>
+    <tr><td>PUT Requests</td><td class="pass">Passed</td><td>Update task, not found, and invalid priority scenarios tested.</td></tr>
+    <tr><td>DELETE Requests</td><td class="pass">Passed</td><td>Delete task and missing task validation tested.</td></tr>
+    <tr><td>Response Codes</td><td class="pass">Passed</td><td>200, 201, 400, and 404 status codes validated.</td></tr>
+    <tr><td>Payload Validation</td><td class="pass">Passed</td><td>JSON success fields, data fields, and error messages validated.</td></tr>
+    <tr><td>Exception Handling</td><td class="pass">Passed</td><td>Invalid inputs and missing records return structured error responses.</td></tr>
+  </table>
+
+  <h2 class="section-title">Test Case Results</h2>
+  <table>
+    <tr><th>#</th><th>Test Case</th><th>Status</th></tr>
+    <tr><td>1</td><td>test_health_check_returns_200</td><td class="pass">Passed</td></tr>
+    <tr><td>2</td><td>test_get_all_tasks_returns_expected_payload</td><td class="pass">Passed</td></tr>
+    <tr><td>3</td><td>test_get_single_task_positive_scenario</td><td class="pass">Passed</td></tr>
+    <tr><td>4</td><td>test_get_single_task_negative_not_found</td><td class="pass">Passed</td></tr>
+    <tr><td>5</td><td>test_post_create_task_positive_scenario</td><td class="pass">Passed</td></tr>
+    <tr><td>6</td><td>test_post_create_task_negative_missing_title</td><td class="pass">Passed</td></tr>
+    <tr><td>7</td><td>test_post_create_task_negative_invalid_status</td><td class="pass">Passed</td></tr>
+    <tr><td>8</td><td>test_put_update_task_positive_scenario</td><td class="pass">Passed</td></tr>
+    <tr><td>9</td><td>test_put_update_task_negative_not_found</td><td class="pass">Passed</td></tr>
+    <tr><td>10</td><td>test_put_update_task_negative_invalid_priority</td><td class="pass">Passed</td></tr>
+    <tr><td>11</td><td>test_delete_task_positive_scenario</td><td class="pass">Passed</td></tr>
+    <tr><td>12</td><td>test_delete_task_negative_not_found</td><td class="pass">Passed</td></tr>
+    <tr><td>13</td><td>test_filter_tasks_by_status</td><td class="pass">Passed</td></tr>
+  </table>
+
+  <h2 class="section-title">Console Result</h2>
+  <pre>============================== 13 passed in 2.17s ==============================</pre>
+</main>
+<footer>
+  API Testing Automation Suite | <strong>Ruknuddin Asrari</strong> | Software Quality Engineer | The Career Insights Hub LLC | 2026
+</footer>
+</body>
+</html>

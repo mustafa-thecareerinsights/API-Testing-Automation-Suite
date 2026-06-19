@@ -1,0 +1,27 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.5, pytest-9.0.2, pluggy-1.6.0 -- /opt/pyvenv/bin/python
+cachedir: .pytest_cache
+metadata: {'Python': '3.13.5', 'Platform': 'Linux-4.4.0-x86_64-with-glibc2.41', 'Packages': {'pytest': '9.0.2', 'pluggy': '1.6.0'}, 'Plugins': {'anyio': '4.13.0', 'cov': '7.0.0', 'metadata': '3.1.1', 'asyncio': '1.3.0', 'json-report': '1.5.0', 'Faker': '40.1.2', 'ddtrace': '4.4.0'}, 'PLATFORM': 'linux/amd64', 'CI': 'true'}
+rootdir: /mnt/data/API-Testing-Automation-Suite-Ruknuddin-Asrari/Source code
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.13.0, cov-7.0.0, metadata-3.1.1, asyncio-1.3.0, json-report-1.5.0, Faker-40.1.2, ddtrace-4.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 13 items
+
+tests/test_api_crud.py::test_health_check_returns_200 PASSED             [  7%]
+tests/test_api_crud.py::test_get_all_tasks_returns_expected_payload PASSED [ 15%]
+tests/test_api_crud.py::test_get_single_task_positive_scenario PASSED    [ 23%]
+tests/test_api_crud.py::test_get_single_task_negative_not_found PASSED   [ 30%]
+tests/test_api_crud.py::test_post_create_task_positive_scenario PASSED   [ 38%]
+tests/test_api_crud.py::test_post_create_task_negative_missing_title PASSED [ 46%]
+tests/test_api_crud.py::test_post_create_task_negative_invalid_status PASSED [ 53%]
+tests/test_api_crud.py::test_put_update_task_positive_scenario PASSED    [ 61%]
+tests/test_api_crud.py::test_put_update_task_negative_not_found PASSED   [ 69%]
+tests/test_api_crud.py::test_put_update_task_negative_invalid_priority PASSED [ 76%]
+tests/test_api_crud.py::test_delete_task_positive_scenario PASSED        [ 84%]
+tests/test_api_crud.py::test_delete_task_negative_not_found PASSED       [ 92%]
+tests/test_api_crud.py::test_filter_tasks_by_status PASSED               [100%]
+
+- generated xml file: /mnt/data/API-Testing-Automation-Suite-Ruknuddin-Asrari/Execution Report/junit_results.xml -
+============================== 13 passed in 2.17s ==============================
